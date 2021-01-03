@@ -6,7 +6,7 @@ class OcrEngine() {
     }
 
     init {
-        System.loadLibrary("OcrLiteOnnxToNcnn")
+        System.loadLibrary("OcrLiteNcnn")
         val ret = init(numThread)
         if (!ret) throw IllegalArgumentException()
     }
