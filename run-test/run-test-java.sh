@@ -25,7 +25,8 @@ $NUM_THREADS \
 3 \
 2.0 \
 1 \
-1
+1 \
+0
 
 #numThread
 #padding
@@ -36,3 +37,4 @@ $NUM_THREADS \
 #unClipRatio
 #doAngle
 #mostAngle
+#gpuIndex

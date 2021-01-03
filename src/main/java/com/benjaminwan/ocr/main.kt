@@ -44,6 +44,10 @@ fun main(args: Array<String>) {
     val mostAngleFlag = if (args.size > 10) args[10].trim().toIntOrNull() ?: 1 else 1
     val mostAngle = (mostAngleFlag == 1)
 
+    //------- gpuIndex -------
+    val gpuIndex = if (args.size > 11) args[11].trim().toIntOrNull() ?: 0 else 0
+    println("gpuIndex=$gpuIndex")
+
     //------- get jni version -------
     val ocrEngine = OcrEngine()
     val version = ocrEngine.getVersion()
@@ -59,7 +63,7 @@ fun main(args: Array<String>) {
         isResultImg = true
     )
     ocrEngine.enableResultText(imagePath)
-    ocrEngine.setGpuIndex(0)//GPU0一般为默认GPU，参数选项：使用CPU(-1)/使用GPU0(0)/使用GPU1(1)/...
+    ocrEngine.setGpuIndex(gpuIndex)//GPU0一般为默认GPU，参数选项：使用CPU(-1)/使用GPU0(0)/使用GPU1(1)/...
     //------- init Models -------
     val ret = ocrEngine.initModels(modelsDir)
     println("init Models $ret")

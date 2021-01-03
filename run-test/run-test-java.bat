@@ -15,7 +15,8 @@ java -Djava.library.path=. -Dfile.encoding=UTF-8 -jar OcrLiteNcnnJvm.jar models 
 3 ^
 2.0 ^
 1 ^
-1
+1 ^
+0
 
 :: numThread
 :: padding
@@ -26,6 +27,7 @@ java -Djava.library.path=. -Dfile.encoding=UTF-8 -jar OcrLiteNcnnJvm.jar models 
 :: unClipRatio
 :: doAngle
 :: mostAngle
+:: gpuIndex
 
 PAUSE
 @ENDLOCAL

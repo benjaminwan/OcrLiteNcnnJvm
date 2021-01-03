@@ -110,6 +110,17 @@ public class Main {
         }
         boolean mostAngle = (mostAngleFlag == 1);
 
+        //------- gpuIndex -------
+        int gpuIndex = 0;
+        if (args.length > 11 && args[11] != null && args[11].length() > 0) {
+            try {
+                gpuIndex = Integer.parseInt(args[11].trim());
+            } catch (NumberFormatException e) {
+                e.printStackTrace();
+            }
+        }
+        System.out.println("gpuIndex=" + gpuIndex);
+
         //------- get jni version -------
         OcrEngine ocrEngine = new OcrEngine();
         String version = ocrEngine.getVersion();
@@ -125,7 +136,7 @@ public class Main {
                 true
         );
         ocrEngine.enableResultText(imagePath);
-        ocrEngine.setGpuIndex(0);//GPU0一般为默认GPU，参数选项：使用CPU(-1)/使用GPU0(0)/使用GPU1(1)/...
+        ocrEngine.setGpuIndex(gpuIndex);//GPU0一般为默认GPU，参数选项：使用CPU(-1)/使用GPU0(0)/使用GPU1(1)/...
         //------- init Models -------
         boolean ret = ocrEngine.initModels(modelsDir);
         System.out.println("init Models " + ret);
