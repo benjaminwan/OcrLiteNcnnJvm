@@ -38,14 +38,10 @@
 * 按“OK”关闭项目设置窗口
 * 打开菜单栏Build->Build Artifacts，找到刚才的配置，并选Build
 * 找到out/artifacts/OcrLiteNcnnJvm/OcrLiteNcnnJvm.jar，并复制到run-test文件夹
-* 测试jar包是否正确编译，在run-test文件夹中运行
-```
-windows:run-test-java.bat
-mac或linx:./run-test-java.sh
-```
+* 测试jar包是否正确编译：顶部Demo下载解压，把编译出来的jar包复制替换进去，然后使用run-test脚本测试。
 
 ### 其它问题
-如果运行显示错误can’t find dependent libraries
+windows部署时如果运行显示错误can’t find dependent libraries
 * 检查是否安装C++运行环境，https://support.microsoft.com/zh-cn/help/2977003/the-latest-supported-visual-c-downloads
 下载安装：vc_redist.x64.exe
 2. GPU版部署需要安装Vulkan SDK
