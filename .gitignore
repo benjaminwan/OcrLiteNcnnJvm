@@ -145,6 +145,7 @@ build-win/
 /run-test/models/*.bin
 /run-test/models/*.param
 /run-test/*.dll
+/run-test/*.lib
 /run-test/*.jar
 /run-test/*.dylib
 /run-test/valgrind-memcheck.txt
